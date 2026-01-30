@@ -1,448 +1,528 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Portafolio</title>
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Cristian Uriel | Full Stack Dev</title>
+
+	<!-- Google Fonts: Montserrat (Headings) & Inter (Body) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;600;700;800&display=swap"
+		rel="stylesheet">
 
 	<!-- Normalize V8.0.1 -->
 	<link rel="stylesheet" href="./css/normalize.css">
 	<!-- Bootstrap V4.3 -->
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<!-- Bootstrap Material Design V4.0 -->
-	<link rel="stylesheet" href="./css/bootstrap-material-design.min.css">
 	<!-- Font Awesome V5.9.0 -->
 	<link rel="stylesheet" href="./css/all.css">
 	<!-- Sweet Alerts V8.13.0 CSS file -->
 	<link rel="stylesheet" href="./css/sweetalert2.min.css">
 	<!-- Sweet Alert V8.13.0 JS file-->
-	<script src="./js/sweetalert2.min.js" ></script>
-	<!-- jQuery Custom Content Scroller V3.1.5 -->
-	<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
+	<script src="./js/sweetalert2.min.js"></script>
 	<!-- General Styles -->
 	<link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body>
 	<!-- Nav lateral -->
 	<section class="full-box nav-lateral">
-			<div class="full-box nav-lateral-bg show-nav-lateral"></div>
-			<div class="full-box nav-lateral-content">
-				<figure class="full-box nav-lateral-avatar">
-					<i class="far fa-times-circle show-nav-lateral"></i>
-					<img src="./assets/avatar/IMG_20251210_183728_773.webp" class="img-fluid" alt="Avatar">
-					<figcaption class="roboto-medium text-center">
-						Cristian Uriel Camacho Pérez<br><small class="roboto-condensed-light">Desarrollador Web Full Stack</small>
-					</figcaption>
-				</figure>
-				<div class="full-box nav-lateral-bar"></div>
-				<nav class="full-box nav-lateral-menu">
-					<ul>
-						<li>
-							<a href="#inicio"><i class="fas fa-home fa-fw"></i> &nbsp; Inicio</a>
-						</li>
+		<div class="full-box nav-lateral-bg show-nav-lateral"></div>
+		<div class="full-box nav-lateral-content">
+			<figure class="full-box nav-lateral-avatar">
+				<i class="far fa-times-circle show-nav-lateral"></i>
+				<img src="./assets/avatar/IMG_20251210_183728_773.webp" class="img-fluid" alt="Avatar">
+				<figcaption class="roboto-medium text-center">
+					Cristian Uriel Camacho Pérez<br><small class="roboto-condensed-light">Desarrollador Web Full
+						Stack</small>
+				</figcaption>
+			</figure>
+			<div class="full-box nav-lateral-bar"></div>
+			<nav class="full-box nav-lateral-menu">
+				<ul>
+					<li>
+						<a href="#inicio"><i class="fas fa-home fa-fw"></i> &nbsp; Inicio</a>
+					</li>
 
-						<li>
-							<a href="#proyectos"><i class="fas fa-code fa-fw"></i> &nbsp; Proyectos</a>
-						</li>
+					<li>
+						<a href="#proyectos"><i class="fas fa-code fa-fw"></i> &nbsp; Proyectos</a>
+					</li>
 
-						<li>
-							<a href="#habilidades"><i class="fas fa-laptop-code fa-fw"></i> &nbsp; Habilidades</a>
-						</li>
+					<li>
+						<a href="#habilidades"><i class="fas fa-laptop-code fa-fw"></i> &nbsp; Habilidades</a>
+					</li>
 
-						<li>
-							<a href="#contacto"><i class="fas fa-envelope fa-fw"></i> &nbsp; Contacto</a>
-						</li>
-					</ul>
-				</nav>
+					<li>
+						<a href="#contacto"><i class="fas fa-envelope fa-fw"></i> &nbsp; Contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Page content -->
+	<section class="full-box page-content">
+		<nav class="full-box navbar-info">
+			<!-- Botón menú lateral -->
+			<a href="#" class="show-nav-lateral">
+				<i class="fas fa-bars"></i>
+			</a>
+
+			<!-- Título -->
+			<div class="navbar-brand">Portafolio</div>
+
+			<div class="navbar-social">
+				<!-- Theme Toggle -->
+				<button id="theme-toggle" class="btn-theme-toggle" title="Cambiar Tema">
+					<i class="fas fa-moon"></i>
+				</button>
+				<a href="https://github.com/RAUriel" target="_blank">
+					<i class="fab fa-github"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/cristian-uriel-camacho-p%C3%A9rez-0aa4732a2/" target="_blank">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</div>
+		</nav>
+
+		<!-- SOBRE MÍ -->
+		<section id="inicio" class="section-container">
+			<div class="glass-card about-card">
+				<h3 class="section-title">
+					<i class="fas fa-user-astronaut"></i> &nbsp; Hola, soy Cristian
+				</h3>
+				<div class="about-content">
+					<p>
+						<strong>Desarrollador Full Stack</strong> apasionado por construir el futuro digital.
+						Con más de 2 años experiencia en microservicios, aplicaciones web y de escritorio escalables, transformo ideas
+						complejas en soluciones elegantes y eficientes.
+					</p>
+
+					<a href="./assets/Uriel_Perez_CV_DesarrolladorFullStack.pdf"
+						download="Uriel_Perez_CV_DesarrolladorFullStack.pdf" class="btn-modern">
+						<i class="fas fa-file-download"></i> Descargar CV
+					</a>
+				</div>
 			</div>
 		</section>
 
-		<!-- Page content -->
-		<section class="full-box page-content">
-			<nav class="full-box navbar-info" style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem 1rem;">
-				<!-- Botón menú lateral -->
-				<a href="#" class="show-nav-lateral" style="color: #2c3e50; font-size: 1.2rem;">
-					<i class="fas fa-exchange-alt"></i>
-				</a>
-
-				<!-- Título -->
-				<h2 style="margin: 0; font-weight: bold; color: #2c3e50;">Portafolio</h2>
-				<div style="margin-left: auto; display: flex; gap: 1rem;">
-					<a href="https://github.com/RAUriel" target="_blank">
-						<i class="fab fa-github fa-lg"></i>
-					</a>
-					<a href="https://www.linkedin.com/in/cristian-uriel-camacho-p%C3%A9rez-0aa4732a2/" target="_blank">
-						<i class="fab fa-linkedin fa-lg"></i>
-					</a>
-				</div>
-			</nav>
-
-			<!-- SOBRE MÍ -->
-			<section id="inicio" class="full-box page-header" style="background: #f9f9f9; padding: 2rem; border-radius: 15px; box-shadow: 0px 4px 15px rgba(0,0,0,0.1);">
-				<h3 class="text-left" style="font-size: 1.8rem; font-weight: bold; color: #2c3e50;">
-					<i class="fas fa-user-circle fa-fw" style="color: #0077b5;"></i> &nbsp; Sobre mí
-				</h3>
-				<p class="text-justify" style="font-size: 1rem; line-height: 1.6; color: #34495e; margin-top: 1rem;">
-					Desarrollador Full Stack con más de dos años de experiencia en microservicios, desarrollo de aplicaciones web y de escritorio. Enfocado por contribuir con soluciones de alto impacto organizacional mediante el diseño y desarrollo de soluciones escalables que generen valor directo para el negocio. Alta capacidad para optimizar procesos, resolver problemas y proponer soluciones eficientes y sostenibles.
-				</p>
-				<p class="text-justify" style="font-size: 1rem; line-height: 1.6; color: #34495e;">
-					Me caracterizo por asumir retos, aprender rápidamente nuevas tecnologías y mejorar de forma continua, 
-					aportando compromiso y capacidad de trabajo en equipo para alcanzar los objetivos del proyecto.
-				</p>
-
-				<div style="margin-top: 1.5rem;">
-					<a href="./assets/Uriel_Perez_CV_DesarrolladorFullStack.pdf" 
-					download="Uriel_Perez_CV_DesarrolladorFullStack.pdf" 
-					class="btn btn-primary" 
-					style="padding: 0.7rem 1.5rem; border-radius: 25px; font-weight: bold;">
-					<i class="fas fa-file-download"></i> Descargar CV
-					</a>
-				</div>
-			</section>
-
-			<!-- PROYECTOS -->
-			<section id="proyectos" class="full-box tile-container" style="margin-top: 3rem;">
-				<h3><i class="fas fa-code fa-fw"></i> Proyectos</h3> <br>
-				<div class="row">
+		<!-- PROYECTOS -->
+		<section id="proyectos" class="section-container">
+			<h3 class="section-title"><i class="fas fa-code fa-fw"></i> Proyectos</h3>
+			<div class="projects-grid">
 				<!-- Proyecto 1: Aplicativo SPEI -->
-				<div class="col-md-6 col-lg-4 mb-4">
-					<div class="card h-100">
-						<!-- Carousel de imágenes -->
-						<div id="carouselSPEI" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
+				<div class="glass-card project-card">
+					<!-- Carousel de imágenes -->
+					<div id="carouselSPEI" class="carousel slide project-img-container" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
 							</div>
-							<a class="carousel-control-prev" href="#carouselSPEI" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Anterior</span>
-							</a>
-							<a class="carousel-control-next" href="#carouselSPEI" role="button" data-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Siguiente</span>
-							</a>
+							<div class="carousel-item">
+								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
+							</div>
 						</div>
-
-						<div class="card-body">
-							<h5 class="card-title">Aplicativo SPEI</h5>
-							<p class="card-text">
-								Plataforma de core bancario que conecta a las instituciones financieras con el sistema de pagos en tiempo real (SPEI) del Banco de México. Permite enviar y recibir transferencias electrónicas de manera inmediata, segura y con trazabilidad, cumpliendo con los estándares regulatorios de Banxico.
-							</p>
+						<a class="carousel-control-prev" href="#carouselSPEI" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselSPEI" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+						<div class="project-overlay">
+							<span class="badge-tech">Java Swing</span>
+							<span class="badge-tech">PostgreSQL</span>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted"><strong>Tecnologías:</strong> Java Swing, PostgreSQL </small>
-						</div>
+					</div>
+					<div class="project-body">
+						<h5>Aplicativo SPEI</h5>
+						<p>Plataforma de escritorio, es un core bancario que conecta a las instituciones financieras con
+							el sistema de pagos en tiempo real (SPEI) del Banco de México. Permite enviar y recibir
+							transferencias
+							electrónicas de manera inmediata, segura y con trazabilidad, cumpliendo con los estándares
+							regulatorios de Banxico. </p>
+						<a href="https://portafolio.uriel/" target="_blank" class="btn-project">
+							Ver Proyecto <i class="fas fa-external-link-alt"></i>
+						</a>
 					</div>
 				</div>
 
 				<!-- Proyecto 2: Visor -->
-				<div class="col-md-6 col-lg-4 mb-4">
-					<div class="card h-100">
-						<!-- Carousel de imágenes -->
-						<div id="carouselVISOR" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
+				<div class="glass-card project-card">
+					<!-- Carousel de imágenes -->
+					<div id="carouselVISOR" class="carousel slide project-img-container" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Visor">
 							</div>
-							<a class="carousel-control-prev" href="#carouselVISOR" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Anterior</span>
-							</a>
-							<a class="carousel-control-next" href="#carouselVISOR" role="button" data-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Siguiente</span>
-							</a>
+							<div class="carousel-item">
+								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Visor">
+							</div>
 						</div>
-
-						<div class="card-body">
-							<h5 class="card-title">Visor</h5>
-							<p class="card-text">
-								Plataforma web que facilita a los operadores de una empresa financiera la gestión de clientes y el manejo de sus cuentas.
-							</p>
+						<a class="carousel-control-prev" href="#carouselVISOR" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselVISOR" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+						<div class="project-overlay">
+							<span class="badge-tech">Angular</span>
+							<span class="badge-tech">Spring Boot</span>
+							<span class="badge-tech">PostgreSQL</span>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted"><strong>Tecnologías:</strong> Angular, Spring Boot, PostgreSQL</small>
-						</div>
+					</div>
+					<div class="project-body">
+						<h5>Visor</h5>
+						<p>Plataforma web que facilita a los operadores de una empresa financiera enviar y recibir
+							transferencias electrónicas de manera inmediata, segura y con trazabilidad, cumpliendo con
+							los estándares regulatorios de Banxico. Es una extensión del proyecto SPEI.</p>
+						<a href="https://portafolio.uriel/" target="_blank" class="btn-project">
+							Ver Proyecto <i class="fas fa-external-link-alt"></i>
+						</a>
 					</div>
 				</div>
 
 				<!-- Proyecto 3: Sistema Banco -->
-				<div class="col-md-6 col-lg-4 mb-4">
-					<div class="card h-100">
-						<!-- Carousel de imágenes -->
-						<div id="carouselBANCO" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="./assets/img/UOSPEI1.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/UOSPEI2.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/UOSPEI4.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
+				<div class="glass-card project-card">
+					<!-- Carousel de imágenes -->
+					<div id="carouselBANCO" class="carousel slide project-img-container" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./assets/img/UOSPEI1.png" class="d-block w-100" alt="Sistema Banco">
 							</div>
-							<a class="carousel-control-prev" href="#carouselBANCO" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Anterior</span>
-							</a>
-							<a class="carousel-control-next" href="#carouselBANCO" role="button" data-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Siguiente</span>
-							</a>
+							<div class="carousel-item">
+								<img src="./assets/img/UOSPEI2.png" class="d-block w-100" alt="Sistema Banco">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/UOSPEI4.png" class="d-block w-100" alt="Sistema Banco">
+							</div>
 						</div>
-
-						<div class="card-body">
-							<h5 class="card-title">Sistema Banco UOSPEI</h5>
-							<p class="card-text">
-								Plataforma web bancaria que permite la gestión integral de usuarios, operaciones de ahorro y administración de categorías. Incluye módulos diferenciados para clientes y administradores, con acceso controlado mediante roles y autenticación.
-							</p>
+						<a class="carousel-control-prev" href="#carouselBANCO" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselBANCO" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+						<div class="project-overlay">
+							<span class="badge-tech">Angular</span>
+							<span class="badge-tech">TypeScript</span>
+							<span class="badge-tech">NodeJS</span>
+							<span class="badge-tech">MySQL</span>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted"><strong>Tecnologías:</strong> Angular, TypeScript, NodeJS, JSON Web Token, MySQL </small>
-						</div>
+					</div>
+					<div class="project-body">
+						<h5>Sistema Banco UOSPEI</h5>
+						<p>Plataforma web bancaria que permite la gestión integral de usuarios, operaciones de ahorro y
+							administración de categorías. Incluye módulos diferenciados para clientes y administradores.
+						</p>
+						<button class="btn-project disabled" disabled>
+							Próximamente <i class="fas fa-clock"></i>
+						</button>
 					</div>
 				</div>
 
-				<!-- Proyecto 3: Sistema Biblioteca -->
-				<div class="col-md-6 col-lg-4 mb-4">
-					<div class="card h-100">
-						<!-- Carousel de imágenes -->
-						<div id="carouselBIBLIOTECA" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="./assets/img/SB1.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SB2.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SB3.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SB4.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SB5.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
+				<!-- Proyecto 4: Sistema Biblioteca -->
+				<div class="glass-card project-card">
+					<!-- Carousel de imágenes -->
+					<div id="carouselBIBLIOTECA" class="carousel slide project-img-container" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./assets/img/SB1.png" class="d-block w-100" alt="Biblioteca">
 							</div>
-							<a class="carousel-control-prev" href="#carouselBIBLIOTECA" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Anterior</span>
-							</a>
-							<a class="carousel-control-next" href="#carouselBIBLIOTECA" role="button" data-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Siguiente</span>
-							</a>
+							<div class="carousel-item">
+								<img src="./assets/img/SB2.png" class="d-block w-100" alt="Biblioteca">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/SB3.png" class="d-block w-100" alt="Biblioteca">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/SB4.png" class="d-block w-100" alt="Biblioteca">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/SB5.png" class="d-block w-100" alt="Biblioteca">
+							</div>
 						</div>
-
-						<div class="card-body">
-							<h5 class="card-title">Sistema Biblioteca</h5>
-							<p class="card-text">
-								Plataforma web para la gestión de bibliotecas, diseñada con módulos diferenciados (Registrar Libros, Consumir, Filtrar, Pedir Prestados, Control de Estado, Etc) para usuarios y administradores.
-							</p>
+						<a class="carousel-control-prev" href="#carouselBIBLIOTECA" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselBIBLIOTECA" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+						<div class="project-overlay">
+							<span class="badge-tech">Angular</span>
+							<span class="badge-tech">NodeJS</span>
+							<span class="badge-tech">MySQL</span>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted"><strong>Tecnologías:</strong> Angular, TypeScript, NodeJS, JSON Web Token, MySQL</small>
-						</div>
+					</div>
+					<div class="project-body">
+						<h5>Sistema Biblioteca</h5>
+						<p>Plataforma web para la gestión de bibliotecas, diseñada con módulos diferenciados (Registrar
+							Libros, Consumir, Filtrar, Pedir Prestados, Control de Estado, Etc) para usuarios y
+							administradores.</p>
+						<button class="btn-project disabled" disabled>
+							Próximamente <i class="fas fa-clock"></i>
+						</button>
 					</div>
 				</div>
 
-				<!-- Proyecto 4: Sistema Algoritmos -->
-				<div class="col-md-6 col-lg-4 mb-4">
-					<div class="card h-100">
-						<!-- Carousel de imágenes -->
-						<div id="carouselAL" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="./assets/img/SA1.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SA2.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SA3.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SA4.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/SA5.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
+				<!-- Proyecto 5: Sistema Algoritmos -->
+				<div class="glass-card project-card">
+					<!-- Carousel de imágenes -->
+					<div id="carouselAL" class="carousel slide project-img-container" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./assets/img/SA1.png" class="d-block w-100" alt="Algoritmos">
 							</div>
-							<a class="carousel-control-prev" href="#carouselAL" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Anterior</span>
-							</a>
-							<a class="carousel-control-next" href="#carouselAL" role="button" data-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Siguiente</span>
-							</a>
+							<div class="carousel-item">
+								<img src="./assets/img/SA2.png" class="d-block w-100" alt="Algoritmos">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/SA3.png" class="d-block w-100" alt="Algoritmos">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/SA4.png" class="d-block w-100" alt="Algoritmos">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/SA5.png" class="d-block w-100" alt="Algoritmos">
+							</div>
 						</div>
-
-						<div class="card-body">
-							<h5 class="card-title">Sistema Algoritmos</h5>
-							<p class="card-text">
-								Plataforma Web de análisis de datos orientada a la clasificación de perfiles de aprendizaje mediante la aplicación de técnicas de Machine Learning. La solución integra algoritmos de aprendizaje supervisado (K-Nearest Neighbors – KNN) y no supervisado (K-Means Clustering), permitiendo al usuario seleccionar y entrenar el modelo de su preferencia
-							</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted"><strong>Tecnologías:</strong> Angular, Scikit-learn, Pandas, NumPy, Excel (integración), NodeJS, MySQL. </small>
+						<a class="carousel-control-prev" href="#carouselAL" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselAL" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+						<div class="project-overlay">
+							<span class="badge-tech">Python</span>
+							<span class="badge-tech">Machine Learning</span>
+							<span class="badge-tech">Angular</span>
 						</div>
 					</div>
-				</div>
-				
-				<!-- Proyecto 5: Sistema Rentas -->
-				<div class="col-md-6 col-lg-4 mb-4">
-					<div class="card h-100">
-						<!-- Carousel de imágenes -->
-						<div id="carouselRENTAS" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-								<div class="carousel-item">
-									<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
-								</div>
-							</div>
-							<a class="carousel-control-prev" href="#carouselRENTAS" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								<span class="sr-only">Anterior</span>
-							</a>
-							<a class="carousel-control-next" href="#carouselRENTAS" role="button" data-slide="next">
-								<span class="carousel-control-next-icon" aria-hidden="true"></span>
-								<span class="sr-only">Siguiente</span>
-							</a>
-						</div>
-
-						<div class="card-body">
-							<h5 class="card-title">Sistema Rentas</h5>
-							<p class="card-text">
-								Plataforma digital Movil desarrollada para la gestión integral de publicaciones y renta de inmuebles o productos. El sistema permite a los usuarios crear y administrar publicaciones con información detallada (título, descripción, ubicación, costo e imágenes), así como aplicar filtros avanzados para encontrar opciones de acuerdo con su presupuesto o ubicación de interés.
-							</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted"><strong>Tecnologías:</strong> Flutter, Dart, MySQL, REST API </small>
-						</div>
+					<div class="project-body">
+						<h5>Sistema Algoritmos</h5>
+						<p>Plataforma Web de análisis de datos orientada a la clasificación de perfiles de aprendizaje
+							mediante la aplicación de técnicas de Machine Learning (KNN y K-Means).</p>
+						<button class="btn-project disabled" disabled>
+							Próximamente <i class="fas fa-clock"></i>
+						</button>
 					</div>
 				</div>
-				
-			</section>
 
-			<!-- HABILIDADES -->
-			<section id="habilidades" class="full-box tile-container" style="margin-top: 3rem;">
-				<h3 class="habilidades-titulo">
-					<i class="fas fa-laptop-code fa-fw"></i> Habilidades Técnicas & Blandas
-				</h3> <br>
+				<!-- Proyecto 6: Sistema Rentas -->
+				<div class="glass-card project-card">
+					<!-- Carousel de imágenes -->
+					<div id="carouselRENTAS" class="carousel slide project-img-container" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Rentas">
+							</div>
+							<div class="carousel-item">
+								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Rentas">
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselRENTAS" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Anterior</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselRENTAS" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Siguiente</span>
+						</a>
+						<div class="project-overlay">
+							<span class="badge-tech">Flutter</span>
+							<span class="badge-tech">Dart</span>
+							<span class="badge-tech">REST API</span>
+						</div>
+					</div>
+					<div class="project-body">
+						<h5>Sistema Rentas</h5>
+						<p>App móvil para gestión de inmuebles. Publicaciones detalladas con ubicación, costos y filtros
+							avanzados.</p>
+						<button class="btn-project disabled" disabled>
+							Próximamente <i class="fas fa-clock"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- HABILIDADES -->
+		<section id="habilidades" class="section-container">
+			<h3 class="section-title">
+				<i class="fas fa-brain"></i> Habilidades
+			</h3>
+
+			<div class="skills-wrapper">
 				<!-- Lenguajes -->
-				<div class="habilidad-categoria">
-					<h4><i class="fas fa-code"></i> Lenguajes de Programación</h4>
-					<div class="habilidad-grid">
-						<div class="habilidad-card">Java</div>
-						<div class="habilidad-card">C#</div>
-						<div class="habilidad-card">TypeScript</div>
-						<div class="habilidad-card">JavaScript</div>
+				<div class="glass-card skill-group">
+					<h4><i class="fas fa-code"></i> Lenguajes</h4>
+					<div class="skill-grid">
+						<div class="skill-card">
+							<i class="fab fa-java"></i>
+							<span>Java</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-file-code"></i> <!-- C# generic -->
+							<span>C#</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-js"></i>
+							<span>JavaScript</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-html5"></i>
+							<span>HTML5/CSS3</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-terminal"></i> <!-- TypeScript Generic -->
+							<span>TypeScript</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-mobile-alt"></i> <!-- Dart Generic -->
+							<span>Dart</span>
+						</div>
 					</div>
 				</div>
 
 				<!-- Frameworks -->
-				<div class="habilidad-categoria">
-					<h4><i class="fas fa-cubes"></i> Frameworks y Librerías</h4>
-					<div class="habilidad-grid">
-						<div class="habilidad-card">Angular</div>
-						<div class="habilidad-card">NodeJS</div>
-						<div class="habilidad-card">Spring Boot</div>
-						<div class="habilidad-card">ASP.NET Core</div>
-						<div class="habilidad-card">.NET</div>
-						<div class="habilidad-card">Flutter</div>
+				<div class="glass-card skill-group">
+					<h4><i class="fas fa-layer-group"></i> Frameworks</h4>
+					<div class="skill-grid">
+						<div class="skill-card">
+							<i class="fab fa-angular"></i>
+							<span>Angular</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-node-js"></i>
+							<span>NodeJS</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-leaf"></i>
+							<span>Spring Boot</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-microsoft"></i>
+							<span>.NET Core</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-mobile"></i>
+							<span>Flutter</span>
+						</div>
 					</div>
 				</div>
 
-				<!-- Bases de datos -->
-				<div class="habilidad-categoria">
-					<h4><i class="fas fa-database"></i> Bases de Datos</h4>
-					<div class="habilidad-grid">
-						<div class="habilidad-card">PostgreSQL</div>
-						<div class="habilidad-card">MySQL</div>
-						<div class="habilidad-card">SQL Server</div>
-						<div class="habilidad-card">MongoDB</div>
+				<!-- Data -->
+				<div class="glass-card skill-group">
+					<h4><i class="fas fa-database"></i> Datos</h4>
+					<div class="skill-grid">
+						<div class="skill-card">
+							<i class="fas fa-database"></i>
+							<span>PostgreSQL</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-server"></i>
+							<span>MySQL</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-hdd"></i>
+							<span>SQL Server</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-project-diagram"></i>
+							<span>MongoDB</span>
+						</div>
 					</div>
 				</div>
 
-				<!-- Herramientas -->
-				<div class="habilidad-categoria">
-					<h4><i class="fas fa-tools"></i> Herramientas</h4>
-					<div class="habilidad-grid">
-						<div class="habilidad-card">Git/GitHub</div>
-						<div class="habilidad-card">Source Tree</div>
+				<!-- Herramientas & Soft Skills -->
+				<div class="glass-card skill-group">
+					<h4><i class="fas fa-tools"></i> Extras</h4>
+					<div class="skill-grid">
+						<div class="skill-card">
+							<i class="fab fa-github"></i>
+							<span>Git/GitHub</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-users-cog"></i>
+							<span>Scrum</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-user-tie"></i>
+							<span>Liderazgo</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-language"></i>
+							<span>Inglés</span>
+						</div>
 					</div>
 				</div>
+			</div>
+		</section>
 
-				<!-- Habilidades Blandas -->
-				<div class="habilidad-categoria">
-					<h4><i class="fas fa-user-friends"></i> Habilidades Blandas</h4>
-					<div class="habilidad-grid">
-						<div class="habilidad-card">Comunicación Efectiva</div>
-						<div class="habilidad-card">Trabajo en Equipo</div>
-						<div class="habilidad-card">Adaptabilidad</div>
-						<div class="habilidad-card">Gestión del Tiempo</div>
-						<div class="habilidad-card">Liderazgo</div>
-						<div class="habilidad-card">Metodologías Ágiles</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- CONTACTO -->
-			<section id="contacto" class="full-box tile-container" style="margin-top: 3rem;">
-				<h3 style="text-align:center; margin-bottom:0rem;">
-					<i class="fas fa-envelope fa-fw"></i> Contacto
+		<!-- CONTACTO -->
+		<section id="contacto" class="section-container">
+			<div class="glass-card contact-card">
+				<h3 class="section-title">
+					<i class="fas fa-paper-plane"></i> Contacto
 				</h3>
 
-				<div class="contact-container">
-					<input type="text" id="email" value="cu40883@gmail.com" readonly>
+				<p class="contact-text">¿Tienes un proyecto en mente? ¡Hablemos!</p>
 
-					<div class="contact-buttons">
-						<!-- Enviar correo -->
-						<button class="contact-btn" onclick="window.location.href='mailto:cu40883@gmail.com'" title="Enviar Correo">
-							<i class="fas fa-paper-plane"></i>
-						</button>
-						<!-- Copiar correo -->
-						<button class="contact-btn" onclick="copyEmail()" title="Copiar Correo">
-							<i class="fas fa-copy"></i>
-						</button>
+				<div class="contact-actions">
+					<div class="email-box">
+						<i class="fas fa-envelope"></i>
+						<span>cu40883@gmail.com</span>
 					</div>
+					<button class="btn-icon" onclick="copyEmail()" title="Copiar"><i class="fas fa-copy"></i></button>
+					<button class="btn-icon" onclick="window.location.href='mailto:cu40883@gmail.com'" title="Enviar"><i
+							class="fas fa-external-link-alt"></i></button>
 				</div>
 
-				<div class="social-contact">
-					<a href="https://github.com/RAUriel" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-					<a href="https://www.linkedin.com/in/cristian-uriel-camacho-p%C3%A9rez-0aa4732a2/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+				<div class="social-links-large">
+					<a href="https://github.com/RAUriel" target="_blank" class="social-btn"><i
+							class="fab fa-github"></i> GitHub</a>
+					<a href="https://www.linkedin.com/in/cristian-uriel-camacho-p%C3%A9rez-0aa4732a2/" target="_blank"
+						class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
 				</div>
-			</section>
+			</div>
+		</section>
 
+		<!-- Footer -->
+		<footer class="glass-footer">
+			<p>&copy; 2025 Uriel. All Rights Reserved. <span class="footer-heart">Desarrollado</span></p>
+		</footer>
 	</section>
 
+	<!-- Scroll To Top Button -->
+	<button id="scrollTopBtn" title="Ir arriba">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+	<!-- Cursor Canvas -->
+	<canvas id="cursor-canvas"></canvas>
 	<!-- jQuery V3.4.1 -->
-	<script src="./js/jquery-3.4.1.min.js" ></script>
+	<script src="./js/jquery-3.4.1.min.js"></script>
 	<!-- popper -->
-	<script src="./js/popper.min.js" ></script>
+	<script src="./js/popper.min.js"></script>
 	<!-- Bootstrap V4.3 -->
-	<script src="./js/bootstrap.min.js" ></script>
-	<!-- jQuery Custom Content Scroller V3.1.5 -->
-	<script src="./js/jquery.mCustomScrollbar.concat.min.js" ></script>
+	<script src="./js/bootstrap.min.js"></script>
 	<!-- Bootstrap Material Design V4.0 -->
-	<script src="./js/bootstrap-material-design.min.js" ></script>
-	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-	<script src="./js/main.js" ></script>
-
+	<script src="./js/bootstrap-material-design.min.js"></script>
+	<script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+	<script src="./js/main.js"></script>
 </body>
+
 </html>
