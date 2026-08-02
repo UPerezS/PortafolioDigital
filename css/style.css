@@ -13,7 +13,7 @@
 	--bg-radial: radial-gradient(circle at top center, rgba(99, 102, 241, 0.06) 0%, transparent 40%);
 	/* Faint Indigo hint */
 
-	--primary-accent: #f8fafc;
+	--primary-accent: #ec77e6;
 	/* Platinum White */
 	--secondary-accent: #e650de;
 	/* Electric Indigo (for key interactions) */
@@ -41,9 +41,9 @@
 	--bg-gradient: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 	--bg-radial: radial-gradient(circle at center, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
 
-	--primary-accent: #2550df;
+	--primary-accent: #3a65f2;
 	/* Darker Blue for contrast */
-	--secondary-accent: #560dd3;
+	--secondary-accent: #3a65f2;
 	/* Darker Violet */
 
 	--text-primary: #1e293b;
