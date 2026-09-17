@@ -84,6 +84,49 @@ $(document).ready(function () {
 	});
 
 	/* =========================================
+	   HERO TYPEWRITER EFFECT
+	   ========================================= */
+	const typewriterElement = document.getElementById('hero-typewriter');
+	if (typewriterElement) {
+		const phrases = [
+			"Desarrollo Backend & Microservicios",
+			"Bases de Datos & Optimización SQL",
+			"Análisis y Limpieza de Datos Masivos",
+			"Arquitectura de Software & APIs REST"
+		];
+		let phraseIndex = 0;
+		let charIndex = 0;
+		let isDeleting = false;
+		let typingSpeed = 90;
+
+		function typeEffect() {
+			const currentPhrase = phrases[phraseIndex];
+			if (isDeleting) {
+				typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+				charIndex--;
+				typingSpeed = 45;
+			} else {
+				typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+				charIndex++;
+				typingSpeed = 95;
+			}
+
+			if (!isDeleting && charIndex === currentPhrase.length) {
+				isDeleting = true;
+				typingSpeed = 1900; // Pause at end of phrase
+			} else if (isDeleting && charIndex === 0) {
+				isDeleting = false;
+				phraseIndex = (phraseIndex + 1) % phrases.length;
+				typingSpeed = 350; // Pause before typing next phrase
+			}
+
+			setTimeout(typeEffect, typingSpeed);
+		}
+
+		typeEffect();
+	}
+
+	/* =========================================
 	   CURSOR TRAIL ANIMATION
 	   ========================================= */
 	const canvas = document.getElementById('cursor-canvas');
@@ -164,6 +207,154 @@ $(document).ready(function () {
 		}
 		animateParticles();
 	}
+
+	/* =========================================
+	   EXPERIENCE ACCORDION INTERACTION
+	   ========================================= */
+	$('.exp-card').each(function () {
+		const $card = $(this);
+		const isActive = $card.hasClass('active');
+		$card.find('.exp-toggle-text').text(isActive ? 'Cerrar' : 'Detalles');
+		$card.find('.exp-toggle-btn').attr('aria-expanded', isActive ? 'true' : 'false');
+	});
+
+	$('.exp-card-header').on('click', function (e) {
+		if ($(e.target).is('a') || $(e.target).closest('a').length) {
+			return;
+		}
+
+		const $card = $(this).closest('.exp-card');
+		const isCurrentlyActive = $card.hasClass('active');
+
+		if (isCurrentlyActive) {
+			$card.removeClass('active');
+			$card.find('.exp-toggle-text').text('Detalles');
+			$card.find('.exp-toggle-btn').attr('aria-expanded', 'false');
+		} else {
+			$card.addClass('active');
+			$card.find('.exp-toggle-text').text('Cerrar');
+			$card.find('.exp-toggle-btn').attr('aria-expanded', 'true');
+		}
+	});
+
+	/* =========================================
+	   PROJECT IMAGE LIGHTBOX
+	   ========================================= */
+	const $lightbox = $('#imageLightbox');
+	const $lightboxImg = $('#lightboxImg');
+	const $lightboxTitle = $('#lightboxTitle');
+	const $lightboxCounter = $('#lightboxCounter');
+	const $lightboxPrev = $('#lightboxPrev');
+	const $lightboxNext = $('#lightboxNext');
+	const $lightboxClose = $('#lightboxClose');
+	const $lightboxOverlay = $('.lightbox-overlay');
+
+	let activeCarousel = null;
+	let currentImages = [];
+	let currentImgIndex = 0;
+
+	// Open Lightbox
+	$('.btn-zoom-img').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+		const $card = $(this).closest('.project-card');
+		const title = $card.find('h5').text().trim();
+		const $carousel = $(this).closest('.carousel');
+		activeCarousel = $carousel;
+
+		const $items = $carousel.find('.carousel-inner .carousel-item');
+		currentImages = [];
+		currentImgIndex = 0;
+
+		$items.each(function (idx) {
+			const $img = $(this).find('img');
+			currentImages.push({
+				src: $img.attr('src'),
+				alt: $img.attr('alt') || title
+			});
+			if ($(this).hasClass('active')) {
+				currentImgIndex = idx;
+			}
+		});
+
+		$lightboxTitle.text(title);
+		updateLightboxView();
+
+		$lightbox.addClass('active');
+		$('body').addClass('lightbox-open');
+	});
+
+	function updateLightboxView() {
+		if (currentImages.length === 0) return;
+
+		const currentItem = currentImages[currentImgIndex];
+		$lightboxImg.attr('src', currentItem.src).attr('alt', currentItem.alt);
+		$lightboxCounter.text((currentImgIndex + 1) + ' / ' + currentImages.length);
+
+		if (currentImages.length > 1) {
+			$lightboxPrev.show();
+			$lightboxNext.show();
+		} else {
+			$lightboxPrev.hide();
+			$lightboxNext.hide();
+		}
+	}
+
+	function nextLightboxImage() {
+		if (currentImages.length <= 1) return;
+		currentImgIndex = (currentImgIndex + 1) % currentImages.length;
+		updateLightboxView();
+		if (activeCarousel) {
+			activeCarousel.carousel(currentImgIndex);
+		}
+	}
+
+	function prevLightboxImage() {
+		if (currentImages.length <= 1) return;
+		currentImgIndex = (currentImgIndex - 1 + currentImages.length) % currentImages.length;
+		updateLightboxView();
+		if (activeCarousel) {
+			activeCarousel.carousel(currentImgIndex);
+		}
+	}
+
+	function closeLightbox() {
+		$lightbox.removeClass('active');
+		$('body').removeClass('lightbox-open');
+	}
+
+	$lightboxNext.on('click', function (e) {
+		e.stopPropagation();
+		nextLightboxImage();
+	});
+
+	$lightboxPrev.on('click', function (e) {
+		e.stopPropagation();
+		prevLightboxImage();
+	});
+
+	$lightboxClose.on('click', function (e) {
+		e.stopPropagation();
+		closeLightbox();
+	});
+
+	$lightboxOverlay.on('click', function (e) {
+		closeLightbox();
+	});
+
+	// Close or navigate with keyboard
+	$(document).on('keydown', function (e) {
+		if (!$lightbox.hasClass('active')) return;
+
+		if (e.key === 'Escape' || e.keyCode === 27) {
+			closeLightbox();
+		} else if (e.key === 'ArrowRight' || e.keyCode === 39) {
+			nextLightboxImage();
+		} else if (e.key === 'ArrowLeft' || e.keyCode === 37) {
+			prevLightboxImage();
+		}
+	});
 
 });
 
