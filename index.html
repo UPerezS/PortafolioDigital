@@ -38,7 +38,7 @@
 				<i class="far fa-times-circle show-nav-lateral"></i>
 				<img src="./assets/avatar/IMG_20251210_183728_773.webp" class="img-fluid" alt="Avatar">
 				<figcaption class="roboto-medium text-center">
-					Cristian Uriel Camacho Pérez<br><small class="roboto-condensed-light">Desarrollador Web Full
+					Cristian Uriel Camacho Pérez<br><small class="roboto-condensed-light">Desarrollador Full
 						Stack</small>
 				</figcaption>
 			</figure>
@@ -47,6 +47,10 @@
 				<ul>
 					<li>
 						<a href="#inicio"><i class="fas fa-home fa-fw"></i> &nbsp; Inicio</a>
+					</li>
+
+					<li>
+						<a href="#experiencia"><i class="fas fa-briefcase fa-fw"></i> &nbsp; Experiencia</a>
 					</li>
 
 					<li>
@@ -90,25 +94,239 @@
 			</div>
 		</nav>
 
-		<!-- SOBRE MÍ -->
+		<!-- SOBRE MÍ / HERO -->
 		<section id="inicio" class="section-container">
 			<div class="glass-card about-card">
-				<h3 class="section-title">
-					<i class="fas fa-user"></i> &nbsp; Hola,
-				</h3>
+				<!-- Status Badge -->
+				<div class="hero-status-container">
+					<div class="hero-status-badge">
+						<span class="status-pulse"></span>
+						<span>Disponible para proyectos & nuevos retos</span>
+					</div>
+				</div>
+
+				<div class="hero-intro">
+					<span class="hero-greeting"><i class="fas fa-terminal"></i> &nbsp; Hola, soy</span>
+					<h1 class="hero-name">Cristian Uriel Camacho Pérez</h1>
+					<div class="hero-typewriter-container">
+						<span class="hero-typewriter-prefix">Especialista en </span>
+						<span id="hero-typewriter" class="hero-typewriter-text"></span><span class="typewriter-cursor">|</span>
+					</div>
+				</div>
+
 				<div class="about-content">
 					<p>
 						Soy Cristian Uriel Camacho Pérez <strong>Desarrollador Full Stack</strong>.
-						Con más de 3 años de experiencia en el diseño y desarrollo de aplicaciones web y de escritorio escalables.
+						Con más de 2 años de experiencia en el diseño y desarrollo de aplicaciones web y de escritorio escalables.
 						Trabajo con arquitecturas monolíticas y de microservicios, aplicando principios de arquitectura de software, 
 						buenas prácticas y patrones de diseño para construir soluciones mantenibles, eficientes y orientadas 
 						al crecimiento del negocio.
 					</p>
 
-					<a href="./assets/Uriel_Perez_CV_DesarrolladorFullStack.pdf"
-						download="Uriel_Perez_CV_DesarrolladorFullStack.pdf" class="btn-modern">
-						<i class="fas fa-file-download"></i> Descargar CV
-					</a>
+					<!-- Métricas y Hechos Reales 
+					<div class="hero-stats-grid">
+						<div class="stat-card">
+							<div class="stat-number">+3</div>
+							<div class="stat-label">Años de Trayectoria</div>
+						</div>
+						<div class="stat-card">
+							<div class="stat-icon"><i class="fas fa-landmark"></i></div>
+							<div class="stat-label">Sector Bancario & Financiero</div>
+						</div>
+						<div class="stat-card">
+							<div class="stat-number">+75%</div>
+							<div class="stat-label">Eficiencia en Consultas SQL</div>
+						</div>
+						<div class="stat-card">
+							<div class="stat-icon"><i class="fas fa-database"></i></div>
+							<div class="stat-label">Backend & Bases de Datos</div>
+						</div>
+					</div>-->
+
+					<div class="hero-actions">
+						<a href="./assets/Uriel_Perez_CV_DesarrolladorFullStack.pdf"
+							download="Uriel_Perez_CV_DesarrolladorFullStack.pdf" class="btn-modern">
+							<i class="fas fa-file-download"></i> Descargar CV
+						</a>
+						<a href="#contacto" class="btn-modern-outline">
+							<i class="fas fa-envelope"></i> Contactar
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EXPERIENCIA LABORAL (DESPLEGABLE / INTERACTIVA) -->
+		<section id="experiencia" class="section-container">
+			<div class="section-header-row">
+				<h3 class="section-title">
+					<i class="fas fa-briefcase fa-fw"></i> Experiencia Laboral
+				</h3>
+				<span class="section-badge-hint"><i class="fas fa-mouse-pointer"></i> Clic para desplegar detalles</span>
+			</div>
+
+			<div class="experience-accordion">
+				<!-- Item 1: Banco del Bajío -->
+				<div class="glass-card exp-card" data-exp="bajio">
+					<div class="exp-card-header">
+						<div class="exp-header-left">
+							<div class="exp-corp-icon">
+								<i class="fas fa-landmark"></i>
+							</div>
+							<div class="exp-header-info">
+								<div class="exp-company-title">
+									Banco del Bajío, S.A., Institución de Banca Múltiple
+									<span class="exp-badge-current">Actual</span>
+								</div>
+								<div class="exp-role-line">
+									<span class="exp-role">Desarrollador Backend & Base de Datos</span>
+									<span class="exp-project-pill"><i class="fas fa-layer-group"></i> Sistema Fénix</span>
+								</div>
+							</div>
+						</div>
+						<div class="exp-header-right">
+							<span class="exp-date-pill"><i class="far fa-calendar-alt"></i> 02/2026 – Actualmente</span>
+							<button class="exp-toggle-btn" type="button" aria-label="Desplegar detalles">
+								<span class="exp-toggle-text">Detalles</span>
+								<i class="fas fa-chevron-down exp-chevron"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="exp-card-body">
+						<div class="exp-body-inner">
+							<ul class="exp-bullets">
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Módulo de Roles y Privilegios (RBAC):</strong> Diseñé y desarrollé la arquitectura integral del módulo de Roles y Privilegios, abarcando el modelado relacional de datos y la implementación de la lógica para usuarios, grupos, roles, menús dinámicos, pantallas, secciones y permisos granulares.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Análisis de Estructuras y Dependencias de BD:</strong> Realicé análisis profundo de esquemas y relaciones de bases de datos, identificando dependencias entre tablas y evaluando con precisión el impacto de modificaciones al modelo sobre la lógica de negocio existente.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Análisis, Limpieza y Transformación de Grandes Volúmenes de Datos:</strong> Procesé información masiva proveniente de fuentes heterogéneas, interpretando su estructura, relaciones y contenido para detectar inconsistencias. Ejecuté su depuración, transformación y estructuración para entregar datos confiables y utilizables para cada requerimiento.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Microservicios y APIs REST:</strong> Desarrollé microservicios y APIs REST con Spring Boot, implementando el consumo seguro de sistemas externos y la transformación eficiente de estructuras de información.
+									</div>
+								</li>
+							</ul>
+							<div class="exp-tags">
+								<span>Spring Boot</span>
+								<span>Microservicios</span>
+								<span>PostgreSQL / SQL</span>
+								<span>Modelado de Datos</span>
+								<span>Roles & Privilegios (RBAC)</span>
+								<span>Limpieza de Datos</span>
+								<span>APIs REST</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 2: LKSBAAS -->
+				<div class="glass-card exp-card" data-exp="lks">
+					<div class="exp-card-header">
+						<div class="exp-header-left">
+							<div class="exp-corp-icon">
+								<i class="fas fa-building"></i>
+							</div>
+							<div class="exp-header-info">
+								<div class="exp-company-title">
+									LKSBAAS S.A. DE C.V.
+								</div>
+								<div class="exp-role-line">
+									<span class="exp-role">Desarrollador Full Stack & Requerimientos / PO</span>
+									<span class="exp-project-pill"><i class="fas fa-desktop"></i> Aplicativo SPEI</span>
+								</div>
+							</div>
+						</div>
+						<div class="exp-header-right">
+							<span class="exp-date-pill"><i class="far fa-calendar-alt"></i> 02/2023 – 01/2026</span>
+							<button class="exp-toggle-btn" type="button" aria-label="Desplegar detalles">
+								<span class="exp-toggle-text">Detalles</span>
+								<i class="fas fa-chevron-down exp-chevron"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="exp-card-body">
+						<div class="exp-body-inner">
+							<!-- Highlights chips -->
+							<div class="experience-highlights-row">
+								<div class="highlight-chip">
+									<i class="fas fa-bolt"></i>
+									<span><strong>+75%</strong> Eficiencia SQL (PL/pgSQL)</span>
+								</div>
+								<div class="highlight-chip">
+									<i class="fas fa-clock"></i>
+									<span><strong>-40%</strong> Tiempo Gestión Reservas</span>
+								</div>
+								<div class="highlight-chip">
+									<i class="fas fa-cogs"></i>
+									<span>Automatización Pagos Masivos</span>
+								</div>
+							</div>
+
+							<ul class="exp-bullets">
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Automatización de Pagos Masivos:</strong> Automaticé procesos críticos de envío de pagos mediante la implementación de módulos configurables, permitiendo la ejecución masiva y parametrizable de diferentes secciones del sistema, reduciendo notablemente la intervención manual.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Optimización de Consultas (+75% de eficiencia):</strong> Incrementé la eficiencia de consultas SQL en un 75% a través de la refactorización profunda y optimización de funciones PL/pgSQL, reduciendo tiempos de respuesta y carga en la base de datos.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Optimización en Gestión de Bahías:</strong> Reduje en más del 40% el tiempo de gestión de reservas de bahías al optimizar los flujos de consulta, validación y disponibilidad.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Reportería Multi-Base de Datos:</strong> Implementé la generación automatizada de reportes en CSV y Excel, integrando y consolidando información proveniente de múltiples bases de datos.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Despliegue Productivo en Cloud:</strong> Realicé el despliegue y publicación del Frontend en entorno productivo, configurando y administrando un servidor Ubuntu en Huawei Cloud.
+									</div>
+								</li>
+								<li>
+									<i class="fas fa-check-circle"></i>
+									<div>
+										<strong>Gestión de Requerimientos & Product Owner:</strong> Conduje el análisis de requerimientos con stakeholders, traduciendo necesidades operativas en especificaciones técnicas claras y gestionando el backlog bajo metodología SCRUM.
+									</div>
+								</li>
+							</ul>
+							<div class="exp-tags">
+								<span>Java Swing</span>
+								<span>PL/pgSQL</span>
+								<span>Optimización SQL</span>
+								<span>Huawei Cloud / Ubuntu</span>
+								<span>Excel & CSV</span>
+								<span>Automatización</span>
+								<span>Product Owner / Requerimientos</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -121,6 +339,9 @@
 				<div class="glass-card project-card">
 					<!-- Carousel de imágenes -->
 					<div id="carouselSPEI" class="carousel slide project-img-container" data-ride="carousel">
+						<button class="btn-zoom-img" type="button" title="Ampliar imagen" aria-label="Ampliar imagen">
+							<i class="fas fa-expand"></i>
+						</button>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Aplicativo SPEI">
@@ -140,18 +361,22 @@
 						<div class="project-overlay">
 							<span class="badge-tech">Java Swing</span>
 							<span class="badge-tech">PostgreSQL</span>
+							<span class="badge-tech">SPEI Banxico</span>
 						</div>
 					</div>
 					<div class="project-body">
 						<h5>Aplicativo SPEI</h5>
-						<p>Plataforma de escritorio, es un core bancario que conecta a las instituciones financieras con
-							el sistema de pagos en tiempo real (SPEI) del Banco de México. Permite enviar y recibir
-							transferencias
-							electrónicas de manera inmediata, segura y con trazabilidad, cumpliendo con los estándares
-							regulatorios de Banxico. </p>
-						<button class="btn-project disabled" disabled>
+						<div class="project-tag-status private">
+							<i class="fas fa-lock"></i> Core Bancario Privado (Banxico)
+						</div>
+						<p>
+							Plataforma de misión crítica que interconecta instituciones financieras con el Sistema de Pagos Electrónicos Interbancarios (SPEI) del Banco de México.
+							<strong>Reto:</strong> Procesamiento en tiempo real con cero tolerancia a fallos y auditoría continua.
+							<strong>Solución & Impacto:</strong> Arquitectura transaccional de alta seguridad, trazabilidad de transferencias de punta a punta y cumplimiento estricto de las normativas regulatorias de Banxico.
+						</p>
+						<!-- <button class="btn-project disabled" disabled>
 							Próximamente <i class="fas fa-clock"></i>
-						</button>
+						</button> -->
 					</div>
 				</div>
 
@@ -159,6 +384,9 @@
 				<div class="glass-card project-card">
 					<!-- Carousel de imágenes -->
 					<div id="carouselVISOR" class="carousel slide project-img-container" data-ride="carousel">
+						<button class="btn-zoom-img" type="button" title="Ampliar imagen" aria-label="Ampliar imagen">
+							<i class="fas fa-expand"></i>
+						</button>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Visor">
@@ -182,13 +410,18 @@
 						</div>
 					</div>
 					<div class="project-body">
-						<h5>Visor</h5>
-						<p>Plataforma web que facilita a los operadores de una empresa financiera enviar y recibir
-							transferencias electrónicas de manera inmediata, segura y con trazabilidad, cumpliendo con
-							los estándares regulatorios de Banxico. Es una extensión del proyecto SPEI.</p>
-						<button class="btn-project disabled" disabled>
+						<h5>Visor Web SPEI</h5>
+						<div class="project-tag-status private">
+							<i class="fas fa-lock"></i> Extensión Web Corporativa
+						</div>
+						<p>
+							Plataforma web operacional para la supervisión, emisión y conciliación de transferencias interbancarias en tiempo real para operadores financieros.
+							<strong>Reto:</strong> Proporcionar a los operadores una interfaz reactiva y segura para monitoreo masivo de operaciones.
+							<strong>Solución:</strong> SPA en Angular conectada con microservicios Spring Boot y PostgreSQL, con control granular de permisos, logs de auditoría y reportes instantáneos.
+						</p>
+						<!-- <button class="btn-project disabled" disabled>
 							Próximamente <i class="fas fa-clock"></i>
-						</button>
+						</button> -->
 					</div>
 				</div>
 
@@ -196,6 +429,9 @@
 				<div class="glass-card project-card">
 					<!-- Carousel de imágenes -->
 					<div id="carouselBANCO" class="carousel slide project-img-container" data-ride="carousel">
+						<button class="btn-zoom-img" type="button" title="Ampliar imagen" aria-label="Ampliar imagen">
+							<i class="fas fa-expand"></i>
+						</button>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="./assets/img/Banca_1.png" class="d-block w-100" alt="Sistema Banco">
@@ -224,18 +460,23 @@
 						<div class="project-overlay">
 							<span class="badge-tech">Angular</span>
 							<span class="badge-tech">TypeScript</span>
-							<span class="badge-tech">NodeJS</span>
+							<span class="badge-tech">Node.js</span>
 							<span class="badge-tech">MySQL</span>
 						</div>
 					</div>
 					<div class="project-body">
 						<h5>Sistema Banco UOSPEI</h5>
-						<p>Plataforma web bancaria que permite la gestión integral de usuarios, operaciones de ahorro y
-							administración de categorías. Incluye módulos diferenciados para clientes y administradores.
+						<div class="project-tag-status live">
+							<i class="fas fa-check-circle"></i> Aplicación Web Financiera
+						</div>
+						<p>
+							Ecosistema web bancario para la gestión integral de cuentas de ahorro, operaciones financieras y administración de usuarios.
+							<strong>Reto:</strong> Arquitectura multi-rol con separación rigurosa de módulos para clientes y administradores.
+							<strong>Solución:</strong> Desarrollo full stack con Angular y Node.js, validaciones transaccionales en MySQL y diseño responsivo para una experiencia bancaria ágil.
 						</p>
-						<a href="https://portafolio.uriel/" target="_blank" class="btn-project">
+						<!-- <a href="https://portafolio.uriel/" target="_blank" class="btn-project">
 							Ver Proyecto <i class="fas fa-external-link-alt"></i>
-						</a>
+						</a> -->
 					</div>
 				</div>
 
@@ -243,6 +484,9 @@
 				<div class="glass-card project-card">
 					<!-- Carousel de imágenes -->
 					<div id="carouselBIBLIOTECA" class="carousel slide project-img-container" data-ride="carousel">
+						<button class="btn-zoom-img" type="button" title="Ampliar imagen" aria-label="Ampliar imagen">
+							<i class="fas fa-expand"></i>
+						</button>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="./assets/img/Biblioteca_1.png" class="d-block w-100" alt="Biblioteca">
@@ -270,18 +514,23 @@
 						</a>
 						<div class="project-overlay">
 							<span class="badge-tech">Angular</span>
-							<span class="badge-tech">NodeJS</span>
+							<span class="badge-tech">Node.js</span>
 							<span class="badge-tech">MySQL</span>
 						</div>
 					</div>
 					<div class="project-body">
-						<h5>Sistema Biblioteca</h5>
-						<p>Plataforma web para la gestión de bibliotecas, diseñada con módulos diferenciados (Registrar
-							Libros, Consumir, Filtrar, Pedir Prestados, Control de Estado, Etc) para usuarios y
-							administradores.</p>
-						<button class="btn-project disabled" disabled>
+						<h5>Sistema de Gestión Bibliotecaria</h5>
+						<div class="project-tag-status platform">
+							<i class="fas fa-book"></i> Plataforma Administrativa
+						</div>
+						<p>
+							Plataforma integral para la administración digital del acervo bibliográfico y el ciclo de vida de préstamos.
+							<strong>Reto:</strong> Automatizar el control de existencias, estados de libros, préstamos activos y devoluciones con cálculo de moras.
+							<strong>Solución:</strong> Interfaz SPA modular en Angular conectada con API RESTful en Node.js y MySQL, permitiendo filtrado dinámico, registro y reportería en tiempo real.
+						</p>
+						<!-- <button class="btn-project disabled" disabled>
 							Próximamente <i class="fas fa-clock"></i>
-						</button>
+						</button> -->
 					</div>
 				</div>
 
@@ -289,6 +538,9 @@
 				<div class="glass-card project-card">
 					<!-- Carousel de imágenes -->
 					<div id="carouselAL" class="carousel slide project-img-container" data-ride="carousel">
+						<button class="btn-zoom-img" type="button" title="Ampliar imagen" aria-label="Ampliar imagen">
+							<i class="fas fa-expand"></i>
+						</button>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="./assets/img/Algoritmo_1.png" class="d-block w-100" alt="Algoritmos">
@@ -321,12 +573,18 @@
 						</div>
 					</div>
 					<div class="project-body">
-						<h5>Sistema Algoritmos</h5>
-						<p>Plataforma Web de análisis de datos orientada a la clasificación de perfiles de aprendizaje
-							mediante la aplicación de técnicas de Machine Learning (KNN y K-Means).</p>
-						<button class="btn-project disabled" disabled>
+						<h5>Sistema Algoritmos & Analítica ML</h5>
+						<div class="project-tag-status ai">
+							<i class="fas fa-brain"></i> Machine Learning & Datos
+						</div>
+						<p>
+							Plataforma analítica diseñada para la clasificación inteligente de perfiles de aprendizaje.
+							<strong>Reto:</strong> Procesamiento, normalización y agrupación de datos multidimensionales de usuarios.
+							<strong>Solución:</strong> Pipeline de análisis y limpieza de datos en Python aplicando algoritmos de Machine Learning (KNN y K-Means), complementado con visualizaciones claras en frontend Angular.
+						</p>
+						<!-- <button class="btn-project disabled" disabled>
 							Próximamente <i class="fas fa-clock"></i>
-						</button>
+						</button> -->
 					</div>
 				</div>
 
@@ -334,6 +592,9 @@
 				<div class="glass-card project-card">
 					<!-- Carousel de imágenes -->
 					<div id="carouselRENTAS" class="carousel slide project-img-container" data-ride="carousel">
+						<button class="btn-zoom-img" type="button" title="Ampliar imagen" aria-label="Ampliar imagen">
+							<i class="fas fa-expand"></i>
+						</button>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<img src="./assets/img/confidencial.png" class="d-block w-100" alt="Rentas">
@@ -357,12 +618,18 @@
 						</div>
 					</div>
 					<div class="project-body">
-						<h5>Sistema Rentas</h5>
-						<p>App móvil para gestión de inmuebles. Publicaciones detalladas con ubicación, costos y filtros
-							avanzados.</p>
-						<button class="btn-project disabled" disabled>
+						<h5>Sistema Rentas Inmobiliarias</h5>
+						<div class="project-tag-status mobile">
+							<i class="fas fa-mobile-alt"></i> Aplicación Móvil
+						</div>
+						<p>
+							Aplicación móvil para la publicación, búsqueda y administración de propiedades en alquiler.
+							<strong>Reto:</strong> Experiencia fluida en dispositivos móviles con búsqueda interactiva y filtros avanzados.
+							<strong>Solución:</strong> Arquitectura reactiva con Flutter y Dart, integración de mapas de ubicación, consumo optimizado de endpoints REST y gestión de estados eficiente.
+						</p>
+						<!-- <button class="btn-project disabled" disabled>
 							Próximamente <i class="fas fa-clock"></i>
-						</button>
+						</button> -->
 					</div>
 				</div>
 			</div>
@@ -370,14 +637,17 @@
 
 		<!-- HABILIDADES -->
 		<section id="habilidades" class="section-container">
-			<h3 class="section-title">
-				<i class="fas fa-brain"></i> Habilidades
-			</h3>
+			<div class="section-header-row">
+				<h3 class="section-title">
+					<i class="fas fa-brain"></i> Habilidades
+				</h3>
+				<span class="section-badge-hint"><i class="fas fa-layer-group"></i> Stack Técnico & Competencias</span>
+			</div>
 
 			<div class="skills-wrapper">
 				<!-- Lenguajes -->
 				<div class="glass-card skill-group">
-					<h4><i class="fas fa-code"></i> Lenguajes</h4>
+					<h4><i class="fas fa-code"></i> Lenguajes <span class="skill-count">8</span></h4>
 					<div class="skill-grid">
 						<div class="skill-card">
 							<i class="fab fa-java"></i>
@@ -388,27 +658,35 @@
 							<span>C#</span>
 						</div>
 						<div class="skill-card">
+							<i class="fas fa-terminal"></i>
+							<span>TypeScript</span>
+						</div>
+						<div class="skill-card">
 							<i class="fab fa-js"></i>
 							<span>JavaScript</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-python"></i>
+							<span>Python</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-php"></i>
+							<span>PHP</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-mobile-alt"></i>
+							<span>Dart</span>
 						</div>
 						<div class="skill-card">
 							<i class="fab fa-html5"></i>
 							<span>HTML5/CSS3</span>
 						</div>
-						<div class="skill-card">
-							<i class="fas fa-terminal"></i> <!-- TypeScript Generic -->
-							<span>TypeScript</span>
-						</div>
-						<div class="skill-card">
-							<i class="fas fa-mobile-alt"></i> <!-- Dart Generic -->
-							<span>Dart</span>
-						</div>
 					</div>
 				</div>
 
-				<!-- Frameworks -->
+				<!-- Frameworks & Librerías -->
 				<div class="glass-card skill-group">
-					<h4><i class="fas fa-layer-group"></i> Frameworks</h4>
+					<h4><i class="fas fa-layer-group"></i> Frameworks & Libs <span class="skill-count">5</span></h4>
 					<div class="skill-grid">
 						<div class="skill-card">
 							<i class="fab fa-angular"></i>
@@ -416,7 +694,7 @@
 						</div>
 						<div class="skill-card">
 							<i class="fab fa-node-js"></i>
-							<span>NodeJS</span>
+							<span>Node.js</span>
 						</div>
 						<div class="skill-card">
 							<i class="fas fa-leaf"></i>
@@ -424,7 +702,7 @@
 						</div>
 						<div class="skill-card">
 							<i class="fab fa-microsoft"></i>
-							<span>.NET Core</span>
+							<span>ASP.NET Core</span>
 						</div>
 						<div class="skill-card">
 							<i class="fas fa-mobile"></i>
@@ -433,48 +711,122 @@
 					</div>
 				</div>
 
-				<!-- Data -->
+				<!-- Bases de Datos -->
 				<div class="glass-card skill-group">
-					<h4><i class="fas fa-database"></i> Datos</h4>
+					<h4><i class="fas fa-database"></i> Bases de Datos <span class="skill-count">6</span></h4>
 					<div class="skill-grid">
 						<div class="skill-card">
 							<i class="fas fa-database"></i>
 							<span>PostgreSQL</span>
 						</div>
 						<div class="skill-card">
-							<i class="fas fa-server"></i>
-							<span>MySQL</span>
-						</div>
-						<div class="skill-card">
 							<i class="fas fa-hdd"></i>
 							<span>SQL Server</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-server"></i>
+							<span>MySQL</span>
 						</div>
 						<div class="skill-card">
 							<i class="fas fa-project-diagram"></i>
 							<span>MongoDB</span>
 						</div>
+						<div class="skill-card">
+							<i class="fas fa-code"></i>
+							<span>PL/SQL & pgSQL</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-broom"></i>
+							<span>Limpieza & ETL</span>
+						</div>
 					</div>
 				</div>
 
-				<!-- Herramientas & Soft Skills -->
+				<!-- Cloud, DevOps & Herramientas -->
 				<div class="glass-card skill-group">
-					<h4><i class="fas fa-tools"></i> Extras</h4>
+					<h4><i class="fas fa-cloud"></i> Cloud, DevOps & Tools <span class="skill-count">6</span></h4>
 					<div class="skill-grid">
 						<div class="skill-card">
-							<i class="fab fa-github"></i>
-							<span>Git/GitHub</span>
+							<i class="fab fa-docker"></i>
+							<span>Docker</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-linux"></i>
+							<span>Linux (Ubuntu)</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-cloud"></i>
+							<span>Huawei Cloud</span>
+						</div>
+						<div class="skill-card">
+							<i class="fab fa-git-alt"></i>
+							<span>Git & GitHub</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-shield-alt"></i>
+							<span>SonarQube</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-exchange-alt"></i>
+							<span>Postman / REST</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product Owner & Gestión Ágil -->
+				<div class="glass-card skill-group">
+					<h4><i class="fas fa-tasks"></i> Product Owner & Gestión <span class="skill-count">6</span></h4>
+					<div class="skill-grid">
+						<div class="skill-card">
+							<i class="fas fa-user-tie"></i>
+							<span>Product Owner</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-clipboard-list"></i>
+							<span>Requerimientos</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-clipboard-check"></i>
+							<span>Historias Usuario</span>
 						</div>
 						<div class="skill-card">
 							<i class="fas fa-users-cog"></i>
-							<span>Scrum</span>
+							<span>Metodología SCRUM</span>
 						</div>
 						<div class="skill-card">
-							<i class="fas fa-user-tie"></i>
+							<i class="fab fa-jira"></i>
+							<span>Jira / Confluence</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-sitemap"></i>
+							<span>Backlog & Alcance</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Habilidades Blandas & Idiomas -->
+				<div class="glass-card skill-group">
+					<h4><i class="fas fa-user-friends"></i> Blandas & Idiomas <span class="skill-count">5</span></h4>
+					<div class="skill-grid">
+						<div class="skill-card">
+							<i class="fas fa-hands-helping"></i>
+							<span>Trabajo en Equipo</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-users"></i>
 							<span>Liderazgo</span>
 						</div>
 						<div class="skill-card">
+							<i class="fas fa-business-time"></i>
+							<span>Gestión del Tiempo</span>
+						</div>
+						<div class="skill-card">
+							<i class="fas fa-comments"></i>
+							<span>Comunicación</span>
+						</div>
+						<div class="skill-card">
 							<i class="fas fa-language"></i>
-							<span>Inglés</span>
+							<span>Inglés (A2)</span>
 						</div>
 					</div>
 				</div>
@@ -501,7 +853,7 @@
 				</div>
 
 				<div class="social-links-large">
-					<a href="https://github.com/RAUriel" target="_blank" class="social-btn"><i
+					<a href="https://github.com/UPerezS" target="_blank" class="social-btn"><i
 							class="fab fa-github"></i> GitHub</a>
 					<a href="https://www.linkedin.com/in/cristian-uriel-camacho-p%C3%A9rez-0aa4732a2/" target="_blank"
 						class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -514,6 +866,31 @@
 			<p>&copy; 2025 Uriel. All Rights Reserved. <span class="footer-heart">Desarrollado</span></p>
 		</footer>
 	</section>
+
+	<!-- Modal / Lightbox para ampliar imágenes de proyectos -->
+	<div id="imageLightbox" class="image-lightbox" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="lightbox-overlay"></div>
+		<div class="lightbox-container">
+			<button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+				<i class="fas fa-times"></i>
+			</button>
+			<div class="lightbox-body">
+				<button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior">
+					<i class="fas fa-chevron-left"></i>
+				</button>
+				<div class="lightbox-img-wrapper">
+					<img id="lightboxImg" src="" alt="Imagen ampliada" class="lightbox-img">
+				</div>
+				<button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente">
+					<i class="fas fa-chevron-right"></i>
+				</button>
+			</div>
+			<div class="lightbox-footer">
+				<span class="lightbox-title" id="lightboxTitle"></span>
+				<span class="lightbox-counter" id="lightboxCounter"></span>
+			</div>
+		</div>
+	</div>
 
 	<!-- Scroll To Top Button -->
 	<button id="scrollTopBtn" title="Ir arriba">
